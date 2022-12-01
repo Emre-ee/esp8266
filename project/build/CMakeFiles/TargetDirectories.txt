@@ -1,0 +1,5 @@
+/home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles/rebuild_cache.dir
+/home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles/edit_cache.dir
+/home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/rebuild_cache.dir
+/home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/edit_cache.dir
+/home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266.dir

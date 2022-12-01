@@ -1,0 +1,13 @@
+[
+{
+  "directory": "/home/emre/Desktop/esp8266/esp8266/build",
+  "command": "/usr/bin/gcc-8  -I/home/emre/Desktop/esp8266/esp8266/project/app/inc  -g   -o app/CMakeFiles/esp8266.dir/main.c.o   -c /home/emre/Desktop/esp8266/esp8266/project/app/main.c",
+  "file": "/home/emre/Desktop/esp8266/esp8266/project/app/main.c"
+},
+
+{
+  "directory": "/home/emre/Desktop/esp8266/esp8266/build",
+  "command": "/usr/bin/gcc-8  -I/home/emre/Desktop/esp8266/esp8266/project/app/inc  -g   -o app/CMakeFiles/esp8266.dir/src/appEsp8266.c.o   -c /home/emre/Desktop/esp8266/esp8266/project/app/src/appEsp8266.c",
+  "file": "/home/emre/Desktop/esp8266/esp8266/project/app/src/appEsp8266.c"
+}
+]
