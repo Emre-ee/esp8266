@@ -41,7 +41,7 @@ Thumbs.db
 **/bin
 **/lib
 **/build*
-**.vscode*
+.vscode/*
 *.gcov
 *scannerwork
 
