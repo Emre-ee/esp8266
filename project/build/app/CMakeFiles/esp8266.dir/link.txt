@@ -1,1 +1,0 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/esp8266.dir/main.c.o CMakeFiles/esp8266.dir/src/appEsp8266.c.o  -o esp8266 

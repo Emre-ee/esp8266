@@ -51,10 +51,56 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/emre/Desktop/esp8266/esp8266/project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/emre/Desktop/esp8266/esp8266/project/build
+CMAKE_BINARY_DIR = //home/emre/Desktop/esp8266/esp8266/project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -78,16 +124,27 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles /home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	$(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,12 +154,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -111,17 +168,82 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named esp8266
+# Target rules for targets named esp8266Lib
 
 # Build rule for target.
-esp8266: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 esp8266
-.PHONY : esp8266
+esp8266Lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 esp8266Lib
+.PHONY : esp8266Lib
 
 # fast build rule for target.
-esp8266/fast:
-	$(MAKE) -f app/CMakeFiles/esp8266.dir/build.make app/CMakeFiles/esp8266.dir/build
-.PHONY : esp8266/fast
+esp8266Lib/fast:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/build
+.PHONY : esp8266Lib/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named unitTest
+
+# Build rule for target.
+unitTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 unitTest
+.PHONY : unitTest
+
+# fast build rule for target.
+unitTest/fast:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/build
+.PHONY : unitTest/fast
 
 # Help Target
 help:
@@ -129,9 +251,19 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... esp8266"
+	@echo "... test"
+	@echo "... esp8266Lib"
+	@echo "... gmock_main"
+	@echo "... gmock"
+	@echo "... gtest_main"
+	@echo "... gtest"
+	@echo "... unitTest"
 .PHONY : help
 
 

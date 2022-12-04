@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/emre/Desktop/esp8266/esp8266/project")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/emre/Desktop/esp8266/esp8266/project/build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

@@ -51,10 +51,44 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/emre/Desktop/esp8266/esp8266/project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/emre/Desktop/esp8266/esp8266/project/build
+CMAKE_BINARY_DIR = //home/emre/Desktop/esp8266/esp8266/project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -78,16 +112,39 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles /home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/progress.marks
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f CMakeFiles/Makefile2 app/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 0
+	cd //home/emre/Desktop/esp8266/esp8266/project/build && $(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/progress.marks
+	cd //home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/app/all
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f CMakeFiles/Makefile2 app/clean
+	cd //home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/app/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,60 +154,33 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f CMakeFiles/Makefile2 app/preinstall
+	cd //home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/app/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f CMakeFiles/Makefile2 app/preinstall
+	cd //home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/app/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd //home/emre/Desktop/esp8266/esp8266/project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-app/CMakeFiles/esp8266.dir/rule:
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f CMakeFiles/Makefile2 app/CMakeFiles/esp8266.dir/rule
-.PHONY : app/CMakeFiles/esp8266.dir/rule
+//home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/rule:
+	cd //home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/rule
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/rule
 
 # Convenience name for target.
-esp8266: app/CMakeFiles/esp8266.dir/rule
+esp8266Lib: //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/rule
 
-.PHONY : esp8266
+.PHONY : esp8266Lib
 
 # fast build rule for target.
-esp8266/fast:
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f app/CMakeFiles/esp8266.dir/build.make app/CMakeFiles/esp8266.dir/build
-.PHONY : esp8266/fast
-
-main.o: main.c.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f app/CMakeFiles/esp8266.dir/build.make app/CMakeFiles/esp8266.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f app/CMakeFiles/esp8266.dir/build.make app/CMakeFiles/esp8266.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f app/CMakeFiles/esp8266.dir/build.make app/CMakeFiles/esp8266.dir/main.c.s
-.PHONY : main.c.s
+esp8266Lib/fast:
+	cd //home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/build
+.PHONY : esp8266Lib/fast
 
 src/appEsp8266.o: src/appEsp8266.c.o
 
@@ -158,7 +188,7 @@ src/appEsp8266.o: src/appEsp8266.c.o
 
 # target to build an object file
 src/appEsp8266.c.o:
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f app/CMakeFiles/esp8266.dir/build.make app/CMakeFiles/esp8266.dir/src/appEsp8266.c.o
+	cd //home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/src/appEsp8266.c.o
 .PHONY : src/appEsp8266.c.o
 
 src/appEsp8266.i: src/appEsp8266.c.i
@@ -167,7 +197,7 @@ src/appEsp8266.i: src/appEsp8266.c.i
 
 # target to preprocess a source file
 src/appEsp8266.c.i:
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f app/CMakeFiles/esp8266.dir/build.make app/CMakeFiles/esp8266.dir/src/appEsp8266.c.i
+	cd //home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/src/appEsp8266.c.i
 .PHONY : src/appEsp8266.c.i
 
 src/appEsp8266.s: src/appEsp8266.c.s
@@ -176,7 +206,7 @@ src/appEsp8266.s: src/appEsp8266.c.s
 
 # target to generate assembly for a file
 src/appEsp8266.c.s:
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f app/CMakeFiles/esp8266.dir/build.make app/CMakeFiles/esp8266.dir/src/appEsp8266.c.s
+	cd //home/emre/Desktop/esp8266/esp8266/project/build && $(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/src/appEsp8266.c.s
 .PHONY : src/appEsp8266.c.s
 
 # Help Target
@@ -185,12 +215,14 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... esp8266"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... test"
+	@echo "... install/local"
+	@echo "... esp8266Lib"
 	@echo "... src/appEsp8266.o"
 	@echo "... src/appEsp8266.i"
 	@echo "... src/appEsp8266.s"
@@ -205,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/emre/Desktop/esp8266/esp8266/project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd //home/emre/Desktop/esp8266/esp8266/project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

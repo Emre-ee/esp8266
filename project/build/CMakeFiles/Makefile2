@@ -47,70 +47,292 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/emre/Desktop/esp8266/esp8266/project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/emre/Desktop/esp8266/esp8266/project/build
+CMAKE_BINARY_DIR = //home/emre/Desktop/esp8266/esp8266/project/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: app/all
+//home/emre/Desktop/esp8266/esp8266/project/build/all: //home/emre/Desktop/esp8266/esp8266/project/build/app/all
+//home/emre/Desktop/esp8266/esp8266/project/build/all: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/all
+//home/emre/Desktop/esp8266/esp8266/project/build/all: //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/all
 
-.PHONY : all
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/all
 
 # The main recursive "preinstall" target.
-preinstall: app/preinstall
+//home/emre/Desktop/esp8266/esp8266/project/build/preinstall: //home/emre/Desktop/esp8266/esp8266/project/build/app/preinstall
+//home/emre/Desktop/esp8266/esp8266/project/build/preinstall: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/preinstall
+//home/emre/Desktop/esp8266/esp8266/project/build/preinstall: //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/preinstall
 
-.PHONY : preinstall
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/preinstall
 
 # The main recursive "clean" target.
-clean: app/clean
+//home/emre/Desktop/esp8266/esp8266/project/build/clean: //home/emre/Desktop/esp8266/esp8266/project/build/app/clean
+//home/emre/Desktop/esp8266/esp8266/project/build/clean: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/clean
+//home/emre/Desktop/esp8266/esp8266/project/build/clean: //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/clean
 
-.PHONY : clean
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/clean
 
 #=============================================================================
-# Directory level rules for directory app
+# Directory level rules for directory //home/emre/Desktop/esp8266/esp8266/project/build/app
 
 # Recursive "all" directory target.
-app/all: app/CMakeFiles/esp8266.dir/all
+//home/emre/Desktop/esp8266/esp8266/project/build/app/all: //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/all
 
-.PHONY : app/all
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/app/all
 
 # Recursive "preinstall" directory target.
-app/preinstall:
+//home/emre/Desktop/esp8266/esp8266/project/build/app/preinstall:
 
-.PHONY : app/preinstall
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/app/preinstall
 
 # Recursive "clean" directory target.
-app/clean: app/CMakeFiles/esp8266.dir/clean
+//home/emre/Desktop/esp8266/esp8266/project/build/app/clean: //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/clean
 
-.PHONY : app/clean
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/app/clean
 
 #=============================================================================
-# Target rules for target app/CMakeFiles/esp8266.dir
+# Directory level rules for directory //home/emre/Desktop/esp8266/esp8266/project/build/googletest
+
+# Recursive "all" directory target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/all: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/all
+
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/all
+
+# Recursive "preinstall" directory target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/preinstall: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/preinstall
+
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/preinstall
+
+# Recursive "clean" directory target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/clean: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/clean
+
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/clean
+
+#=============================================================================
+# Directory level rules for directory //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock
+
+# Recursive "all" directory target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/all: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/all: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/all
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/all: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/all
+
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/all
+
+# Recursive "preinstall" directory target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/preinstall: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/preinstall
+
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/preinstall
+
+# Recursive "clean" directory target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/clean: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/clean: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/clean
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/clean: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/clean
+
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/clean
+
+#=============================================================================
+# Directory level rules for directory //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest
+
+# Recursive "all" directory target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/all: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/all
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/all: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/all
+
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/all
+
+# Recursive "preinstall" directory target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/preinstall:
+
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/preinstall
+
+# Recursive "clean" directory target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/clean: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/clean: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/clean
+
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/clean
+
+#=============================================================================
+# Directory level rules for directory //home/emre/Desktop/esp8266/esp8266/project/build/unit_test
+
+# Recursive "all" directory target.
+//home/emre/Desktop/esp8266/esp8266/project/build/unit_test/all: //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/all
+
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/all
+
+# Recursive "preinstall" directory target.
+//home/emre/Desktop/esp8266/esp8266/project/build/unit_test/preinstall:
+
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/preinstall
+
+# Recursive "clean" directory target.
+//home/emre/Desktop/esp8266/esp8266/project/build/unit_test/clean: //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/clean
+
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/clean
+
+#=============================================================================
+# Target rules for target //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir
 
 # All Build rule for target.
-app/CMakeFiles/esp8266.dir/all:
-	$(MAKE) -f app/CMakeFiles/esp8266.dir/build.make app/CMakeFiles/esp8266.dir/depend
-	$(MAKE) -f app/CMakeFiles/esp8266.dir/build.make app/CMakeFiles/esp8266.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles --progress-num=1,2,3 "Built target esp8266"
-.PHONY : app/CMakeFiles/esp8266.dir/all
+//home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/all:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/depend
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=//home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles --progress-num=1,2 "Built target esp8266Lib"
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/all
 
 # Build rule for subdir invocation for target.
-app/CMakeFiles/esp8266.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 app/CMakeFiles/esp8266.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 0
-.PHONY : app/CMakeFiles/esp8266.dir/rule
+//home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 0
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/rule
 
 # Convenience name for target.
-esp8266: app/CMakeFiles/esp8266.dir/rule
+esp8266Lib: //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/rule
 
-.PHONY : esp8266
+.PHONY : esp8266Lib
 
 # clean rule for target.
-app/CMakeFiles/esp8266.dir/clean:
-	$(MAKE) -f app/CMakeFiles/esp8266.dir/build.make app/CMakeFiles/esp8266.dir/clean
-.PHONY : app/CMakeFiles/esp8266.dir/clean
+//home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/clean:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/clean
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/clean
+
+#=============================================================================
+# Target rules for target //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir
+
+# All Build rule for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/all: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/all
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/all: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=//home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+
+# Build rule for subdir invocation for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 0
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
+
+# Convenience name for target.
+gmock_main: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
+
+.PHONY : gmock_main
+
+# clean rule for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+
+#=============================================================================
+# Target rules for target //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir
+
+# All Build rule for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/all: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/depend
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=//home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles --progress-num=3,4 "Built target gmock"
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/all
+
+# Build rule for subdir invocation for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 0
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/rule
+
+# Convenience name for target.
+gmock: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/rule
+
+.PHONY : gmock
+
+# clean rule for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/clean:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/clean
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googlemock/CMakeFiles/gmock.dir/clean
+
+#=============================================================================
+# Target rules for target //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir
+
+# All Build rule for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/all: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=//home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles --progress-num=9,10 "Built target gtest_main"
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/all
+
+# Build rule for subdir invocation for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 0
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/rule
+
+# Convenience name for target.
+gtest_main: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/rule
+
+.PHONY : gtest_main
+
+# clean rule for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+
+#=============================================================================
+# Target rules for target //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir
+
+# All Build rule for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/all:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/depend
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=//home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles --progress-num=7,8 "Built target gtest"
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/all
+
+# Build rule for subdir invocation for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 0
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/rule
+
+# Convenience name for target.
+gtest: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/rule
+
+.PHONY : gtest
+
+# clean rule for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/clean:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/clean
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/clean
+
+#=============================================================================
+# Target rules for target //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir
+
+# All Build rule for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/all: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest_main.dir/all
+//home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/all: //home/emre/Desktop/esp8266/esp8266/project/build/googletest/googletest/CMakeFiles/gtest.dir/all
+//home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/all: //home/emre/Desktop/esp8266/esp8266/project/build/app/CMakeFiles/esp8266Lib.dir/all
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/depend
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=//home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles --progress-num=11,12 "Built target unitTest"
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/all
+
+# Build rule for subdir invocation for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/emre/Desktop/esp8266/esp8266/project/build/CMakeFiles 0
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/rule
+
+# Convenience name for target.
+unitTest: //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/rule
+
+.PHONY : unitTest
+
+# clean rule for target.
+//home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/clean:
+	$(MAKE) -f //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/build.make //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/clean
+.PHONY : //home/emre/Desktop/esp8266/esp8266/project/build/unit_test/CMakeFiles/unitTest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
