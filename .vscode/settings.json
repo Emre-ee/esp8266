@@ -1,6 +1,0 @@
-{
-    "cmake.sourceDirectory": "${workspaceFolder}/project",
-    "files.associations": {
-        "appesp8266.h": "c"
-    }
-}
