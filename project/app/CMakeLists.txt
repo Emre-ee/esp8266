@@ -8,9 +8,10 @@ set(Sources
 
 set(Headers 
             "inc/appEsp8266.h"
+            "inc/config.h"
 )
 
-include_directories(inc/)
+include_directories(inc)
 
 if (UNIT_TEST STREQUAL "ON")
 
@@ -21,14 +22,11 @@ if (UNIT_TEST STREQUAL "ON")
     AppLib_include
     )
 
-    # target_link_libraries (esp8266Lib PUBLIC gtest_main) 
+    target_compile_definitions(esp8266Lib PUBLIC UNIT_TEST=1)
 
 else()
     message("app CMakeLists---> Unit Test Off")
     add_executable(esp8266 main.c ${Sources} ${Headers})
-
-
-
 endif()
 
 

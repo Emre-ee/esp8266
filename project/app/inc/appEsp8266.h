@@ -2,10 +2,9 @@
 #define APPESP8266_H
 #include <stdio.h>
 #include <stdint.h>
-
-#define SUCCESS 0
-#define FAILURE 1
+#include "config.h"
 
 int appEsp8266Init(void);
+int uart_init(UART_HandleTypeDef *Uart);
 
 #endif // APPESP8266_H
