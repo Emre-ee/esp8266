@@ -1,6 +1,9 @@
+#pragma once
 #ifndef CONFIG_H
 #define CONFIG_H
 /* code */
+#include <stdint.h>
+#include <stdio.h>
 #define SUCCESS 0
 #define FAILURE 1
 

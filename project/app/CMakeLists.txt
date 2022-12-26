@@ -4,11 +4,15 @@ project (esp8266)
 
 set(Sources 
             "src/appEsp8266.c"
+            "src/appGpio.c"
+            "src/appUart.c"
 )
 
 set(Headers 
             "inc/appEsp8266.h"
             "inc/config.h"
+            "inc/appGpio.h"
+            "inc/appUart.h"
 )
 
 include_directories(inc)

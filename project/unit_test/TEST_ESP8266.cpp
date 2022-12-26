@@ -4,14 +4,13 @@
 #include "mock_uart_class.h"
 #include "esp8266_mock.hpp"
 
-#include "../app/src/appEsp8266.c"   
+#include "appGpio.c"
+#include "appUart.c"
 
-
+// This function prototype defination used for function override. 
+FUNC_TEST int gpio_init(void);
 
 using namespace testing;
-
-//https://stackoverflow.com/questions/31989040/can-gmock-be-used-for-stubbing-c-functions
-
 
 
 class Esp8266: public ::testing::Test {
@@ -33,7 +32,6 @@ public:
    
 };
 
-//https://cmake.org/cmake/help/latest/module/FindPkgConfig.html
 TEST_F(Esp8266,UartInit)
 {   
     

@@ -13,7 +13,8 @@ set(Headers
     mock/mock_uart_class.h
 )
 
-
+include_directories(../app/inc)
+include_directories(../app/src)
 
 
 add_executable(unitTest ${Sources} ${Headers})
@@ -25,7 +26,7 @@ target_link_libraries(unitTest PUBLIC
     esp8266Lib
 )   
 
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}/mock")
+
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/mock")
  # I couldn't make it work with INTERFACE_INCLUDE_DIRECTORIES
  include_directories("${source_dir}/googletest/include"

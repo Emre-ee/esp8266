@@ -22,7 +22,7 @@
 #define __MOCK_UART_CLASS_H__
 
 #include <gmock/gmock.h>
-#include "../../app/inc/config.h"
+#include "config.h"
 #include <memory>
 
 class IMockESP

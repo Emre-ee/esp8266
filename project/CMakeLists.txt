@@ -1,6 +1,15 @@
 cmake_minimum_required(VERSION 3.0.0)
 
 project (esp8266)
+
+
+message(STATUS "--- CMAKE SYSTEM: ${CMAKE_SYSTEM}")
+message(STATUS "--- CMAKE SYSTEM LIB PATH: ${CMAKE_SYSTEM_LIBRARY_PATH}")
+message(STATUS "--- CMAKE LIB PATH: ${CMAKE_LIBRARY_PATH}")
+message(STATUS "--- CMAKE VERSION: ${CMAKE_VERSION}")
+message(STATUS "--- PLATFORM: ${PLATFORM}")
+message(STATUS "--- Do not warn about unused CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
+message(STATUS "--- Do not warn about unused BUILD_DIR: ${BUILD_DIR}")
 find_package(Threads)
 
 if (UNIT_TEST STREQUAL "ON")
